@@ -30,14 +30,14 @@ Model mencapai akurasi lebih dari 90% pada data uji. Disediakan pula visualisasi
 
 ## Struktur Folder
 /tfjs_model
-───group1-shard1of1.bin
-───model.json
+- group1-shard1of1.bin
+- model.json
 /tflite
-───model.tflite
-───label.txt
+- model.tflite
+- label.txt
 /saved_model
-───saved_model.pb
-───variables
+- saved_model.pb
+- variables
 notebook.ipynb
 README.md
 requirements.txt
