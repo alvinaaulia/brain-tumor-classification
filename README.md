@@ -29,28 +29,17 @@ Model mencapai akurasi lebih dari 90% pada data uji. Disediakan pula visualisasi
 - Google Colab (untuk eksperimen dan pelatihan)
 
 ## Struktur Folder
-├───tfjs_model
-
+/tfjs_model
 | ├───group1-shard1of1.bin
-
 | └───model.json
-
-├───tflite
-
+/tflite
 | ├───model.tflite
-
 | └───label.txt
-
-├───saved_model
-
+/saved_model
 | ├───saved_model.pb
-
 | └───variables
-
 ├───notebook.ipynb
-
 ├───README.md
-
 └───requirements.txt
 
 ## Tujuan Proyek
