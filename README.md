@@ -1,49 +1,63 @@
-#  Proyek Klasifikasi Gambar: Brain Tumor MRI Multi-Class Dataset
-Proyek ini bertujuan untuk membangun model deep learning berbasis Convolutional Neural Network (CNN) untuk mengklasifikasi citra MRI otak ke dalam beberapa kategori tumor, menggunakan dataset multi-kelas dari Kaggle. Klasifikasi ini mencakup jenis tumor seperti meningioma, glioma, pituitary, dan kondisi non-tumor (healthy).
+# Brain Tumor MRI Multi-Class Classification
 
-## Dataset
-Dataset yang digunakan merupakan kumpulan gambar MRI otak berlabel yang bersumber dari:
-📁 https://www.kaggle.com/datasets/maxwellbernard/brain-tumor-mri-multi-class-dataset
+Proyek ini merupakan implementasi model klasifikasi gambar berbasis deep learning menggunakan dataset [Brain Tumor MRI Multi-Class Dataset](https://www.kaggle.com/datasets/maxwellbernard/brain-tumor-mri-multi-class-dataset). Model dibangun untuk mengenali berbagai jenis tumor otak dari citra MRI.
 
-Dataset terdiri dari 4 kelas utama:
-- Glioma Tumor
-- Healthy
-- Meningioma Tumor
-- Pituitary Tumor
+## Kontributor
 
-## Alur Proyek
-- Preprocessing gambar (resizing, augmentasi, normalisasi)
-- Split dataset menjadi training, validation, dan test
-- Membangun model CNN menggunakan TensorFlow/Keras
-- Pelatihan model dengan EarlyStopping dan model checkpoint
-- Evaluasi menggunakan confusion matrix dan classification report
-- Ekspor model ke format TensorFlow SavedModel, TFLite, dan TensorFlow.js
+- **Nama**: Alvina Aulia Nisa  
+- **Email**: alvinaaulians@gmail.com  
+- **ID Dicoding**: alvinaaulianisa
 
-## Hasil & Evaluasi
-Model mencapai akurasi lebih dari 90% pada data uji. Disediakan pula visualisasi training loss dan accuracy, serta confusion matrix untuk memahami performa klasifikasi.
+## Deskripsi Dataset
 
-## Teknologi yang Digunakan
-- Python 3.x
+Dataset terdiri dari citra MRI otak yang terbagi dalam beberapa kelas tumor:
+
+- Glioma
+- Meningioma
+- Pituitary
+- No Tumor
+
+Struktur folder dataset digunakan untuk pelatihan model klasifikasi multi-kelas.
+
+## Teknologi dan Library
+
+Notebook ini menggunakan library berikut:
+
 - TensorFlow / Keras
-- NumPy, OpenCV, Matplotlib, scikit-learn
-- Google Colab (untuk eksperimen dan pelatihan)
+- NumPy, Matplotlib
+- Scikit-learn
+- ImageDataGenerator untuk augmentasi data
+- Callback Keras seperti `EarlyStopping`, `ModelCheckpoint`, dan `ReduceLROnPlateau`
 
-## Struktur Folder
-<pre> 
-  submission 
-  ├───tfjs_model 
-  │ ├───group1-shard1of1.bin 
-  │ └───model.json 
-  ├───tflite │ 
-  ├───model.tflite 
-  │ └───label.txt 
-  ├───saved_model 
-  │ ├───saved_model.pb 
-  │ └───variables 
-  ├───notebook.ipynb 
-  ├───README.md 
-  └───requirements.txt
-</pre>
+## Tahapan Proyek
 
-## Tujuan Proyek
-Proyek ini ditujukan sebagai kontribusi awal terhadap deteksi dini tumor otak menggunakan teknologi pembelajaran mesin dan dapat dijadikan dasar untuk integrasi ke sistem berbasis web atau mobile untuk deteksi tumor berbasis citra medis.
+1. **Import Library**
+2. **Persiapan Data** (pemisahan dataset train/val/test)
+3. **Augmentasi Gambar**
+4. **Arsitektur CNN** menggunakan Keras Sequential API
+5. **Training Model**
+6. **Evaluasi Model** dengan confusion matrix dan classification report
+7. **Visualisasi Hasil**
+
+## Hasil Evaluasi
+
+Model dilatih dan dievaluasi menggunakan metrik seperti akurasi, confusion matrix, dan classification report untuk menilai performa pada data uji.
+
+## Struktur Notebook
+
+Notebook terdiri dari 30+ cell yang mencakup dokumentasi markdown, kode Python, dan visualisasi hasil.
+
+## Catatan
+
+- Notebook dijalankan di Google Colab.
+- Pastikan Anda mengunggah dataset ke direktori yang sesuai sebelum menjalankan cell pemrosesan data.
+- Model dapat disimpan dan diekspor ke format TensorFlow SavedModel, TF Lite, atau TF.js jika dibutuhkan.
+
+## Lisensi Dataset
+
+Lihat detail lisensi dataset di:  
+[https://www.kaggle.com/datasets/maxwellbernard/brain-tumor-mri-multi-class-dataset](https://www.kaggle.com/datasets/maxwellbernard/brain-tumor-mri-multi-class-dataset)
+
+---
+
+> Notebook ini dikembangkan untuk proyek klasifikasi citra tumor otak sebagai bagian dari pembelajaran dan eksplorasi model CNN dalam domain medis.
